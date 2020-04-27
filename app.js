@@ -1,3 +1,12 @@
+ import React from 'react'
+ import ReactDOM from 'react-dom'
+// import { Provider, connect } from 'react-redux'
+// import { createStore, combineReducers, applyMiddleware } from 'redux'
+// import thunk from 'redux-thunk'
+
+// import rootReducer from './redux/reducers'
+ import App from './components/App'
+
 const BANK = [
   {
     keyCode: 81,
@@ -143,11 +152,13 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("drum-machine"));
-var br = document.createElement("br");
-document.getElementById("Heater-3").after(br);
-var br = document.createElement("br");
-document.getElementById("Open-HH").after(br);
-var btn = document.getElementsByClassName("drum-pad");
-btn[3].style.marginLeft = "50px";
-btn[6].style.marginLeft = "100px";
+document.addEventListener('DOMContentLoaded', () => { 
+    ReactDOM.render(<App />, document.getElementById("drum-machine"));
+    var br = document.createElement("br");
+    document.getElementById("Heater-3").after(br);
+    var br = document.createElement("br");
+    document.getElementById("Open-HH").after(br);
+    var btn = document.getElementsByClassName("drum-pad");
+    btn[3].style.marginLeft = "50px";
+    btn[6].style.marginLeft = "100px";
+})
